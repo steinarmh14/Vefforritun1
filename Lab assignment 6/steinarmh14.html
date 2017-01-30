@@ -1,0 +1,104 @@
+
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style type="text/css">
+        .latest
+        {
+            background-color: grey;
+        }
+        </style>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        
+    </head>
+    <body>
+<a id="mylink" href="#">Click me!</a>
+<script type="text/javascript">
+    var link = document.getElementById("mylink");
+    link.onclick = function()
+    {
+        return confirm("Hello world");
+    }
+</script>
+
+
+<div id="header">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat, libero eget accumsan malesuada, neque quam rhoncus enim, ac luctus dui nisl quis massa. Donec ut pulvinar justo. Suspendisse potenti. Aliquam erat volutpat.
+</div>
+
+<a href="#" onclick="hide();">Hide text!</a>
+<script type="text/javascript">
+    function hide()
+    {
+        var link = document.getElementById("header");
+       link.style.display="none"; 
+    }
+</script>
+        
+<a href="#" onclick="show();">Show text!</a>
+<script type="text/javascript">
+    function show()
+    {
+        var link = document.getElementById("header");
+       link.style.display="block"
+    }
+</script>
+
+<script type="text/javascript">
+    function sum(a, b)
+    {
+        return a+b;
+    }
+</script>
+        
+<form>
+    <input type="text" id="number1"/>
+    +<input type="text" id="number2"/>
+    <input type="button" name="sumbutton" value="Sum" onclick="calculate();"/>
+</form>
+    
+<script type="text/javascript">
+    function calculate()
+    {
+        var num1 = parseInt(document.getElementById("number1").value);
+        var num2 = parseInt(document.getElementById("number2").value);
+        var sums = sum(num1, num2);
+        return confirm(sums);
+    }
+    
+</script>
+        
+<div class="news">
+        i hate u teemo
+</div>
+        
+<div class="news">
+        Van Gaal > Brendan Rodgers
+</div>
+      
+<div class="news">
+        The swag is strong here
+</div>
+        
+        <script type="text/javascript">
+            $(document).ready(function()
+                {
+                    $(".news").addClass("latest"); 
+                });
+        </script>
+        
+  <script>
+    $(function() 
+        {
+            $( "#datepicker" ).datepicker();
+        });
+  </script> 
+        
+<p>Date: <input type="text" id="datepicker"></p>
+ 
+    </body>
+</html>
+        

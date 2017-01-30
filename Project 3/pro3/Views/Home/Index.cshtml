@@ -1,0 +1,10 @@
+﻿@model IEnumerable<pro3.Models.NewsItem>
+<h1>Latest News</h1>
+@foreach (var item in Model)
+{
+    <div class="well well-lg">
+        <span class="title" style="font-size:x-large">@Html.ActionLink(item.Title, "Edit", new { id = item.Id }) </span>
+        <span class="date" style="float:right">@item.DateCreated <span class="glyphicon glyphicon-time"></span></span>
+        <div>@item.Text</div>
+    </div>
+}
